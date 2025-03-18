@@ -15,5 +15,12 @@
 
 
 fun main() {
-    println("Hello World!")
+    println()
+    println("Old Gold game 700")
+    println("=================================================================================================================================================")
+    println("This is a two-player game, played on a one-dimensional grid with coins, * where the aim is to win by being the player who removes the gold coin.")
+    println("=================================================================================================================================================")
+
+    val coins = mutableListOf<String>()
+
 }
