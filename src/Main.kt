@@ -13,7 +13,7 @@
  */
 
 const val NUMBOXES = 20
-const val EMPTY = " "
+const val EMPTY = "---"
 
 
 fun main() {
@@ -26,7 +26,15 @@ fun main() {
     println("Welcome to Old Gold!")
     println("Please enter your names for player 1 and 2: ")
 
-    val coins = setupBoxes()
+
+    val coins = setUpBoxes()
+
+    coins.add("Coin 1")
+    coins.add("Coin 2")
+    coins.add("Coin 3")
+    coins.add("Coin 4")
+    coins.add("Coin 5")
+    coins.add("Gold")
 
     val player1 = readln()
     println("Player 1: $player1")
@@ -36,33 +44,54 @@ fun main() {
 
     println("Placing coins into the Boxes...")
 
-
-
-
+    coins.shuffle()
+    listAllBoxes(coins)
 
     layOut(coins)
     println()
 
 }
 
-fun setupBoxes(): MutableList<String> {
+fun setUpBoxes(): MutableList<String> {
     val boxList = mutableListOf<String>()
     for (i in 1..NUMBOXES) boxList.add(EMPTY)
     return boxList
 }
 
 fun placeCoinInBox(boxList: MutableList<String>, boxNum: Int, name: String) {
+    println("Putting $name into box $boxNum")
+    boxList[boxNum - 1] = name
+}
+
+fun listAllBoxes(boxList: List<String>) {
+
+    for (i in 0..<boxList.size) {
+        if (boxList[i] != EMPTY) {
+            println("- ${boxList[i]}")
+        }
+
+    }
+
+}
+fun listEmptyBoxes(boxList: List<String>) {
+    for (i in 0..<boxList.size) {
+        if (boxList[i] == EMPTY) {
+            println("- ${i + 1}")
+        }
+
+    }
+
 
 }
 
 fun layOut(boxList: List<String>) {
 
-    println("+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+")
+    println("+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+")
     for (i in 0..boxList.size - 1) {
-        print("| ${i + 1} " .padEnd(4))
+        print("| ${boxList[i]}".padEnd(4))
     }
-    println("|")
-    println("+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+")
+    println(" |")
+    println("+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+")
 }
 
 
