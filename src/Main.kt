@@ -13,7 +13,7 @@
  */
 
 const val NUMBOXES = 20
-const val EMPTY = " "
+const val EMPTY = "  "
 
 
 fun main() {
@@ -30,12 +30,12 @@ fun main() {
 
     val coins = setUpBoxes()
 
-    coins.add("S")
-    coins.add("S")
-    coins.add("S")
-    coins.add("S")
-    coins.add("S")
-    coins.add("G")
+    coins.add("S1")
+    coins.add("S2")
+    coins.add("S3")
+    coins.add("S4")
+    coins.add("S5")
+    coins.add("G ")
 
     val player1 = readln()
     println("Player 1: $player1")
@@ -54,7 +54,7 @@ fun main() {
     layOut(coins)
     println()
 
-
+    swapBoxes(coins)
 
 
 
@@ -66,10 +66,6 @@ fun setUpBoxes(): MutableList<String> {
     return boxList
 }
 
-/*fun placeCoinInBox(boxList: MutableList<String>, boxNum: Int, name: String) {
-    println("Putting $name into box $boxNum")
-    boxList[boxNum - 1] = name
-}*/
 
 fun listAllBoxes(boxList: List<String>) {
     for (i in 0..<boxList.size) {
@@ -94,23 +90,26 @@ fun listEmptyBoxes(boxList: List<String>) {
 fun layOut(boxList: List<String>) {
 
 
-    println("+---".repeat(20) + "+")
+    println("+----".repeat(20) + "+")
     for (i in 0..boxList.size - 1) {
-        print("| ${i + 1}".padEnd(4))
+        print("| ${i + 1} ".padEnd(5))
     }
     println("|")
-    println("+---".repeat(20) + "+")
+    println("+----".repeat(20) + "+")
     for (i in 0..boxList.size - 1) {
         print("| ${boxList[i]} ")
     }
     println("|")
-    println("+---".repeat(20) + "+")
+    println("+----".repeat(20) + "+")
 
 }
-fun swapBoxes(boxList: MutableList<String>, boxNum1: Int, boxNum2: Int) {
+fun swapBoxes(boxList: List<String>) {
+    println("What coin do you want to move?: ")
+    var swapCoin = readln()
+    boxList[boxNum1 - 1]
 
-    val swap = readln().toInt()
-    println("What coin do you want to move? ")
+    println("What box would you like to move ${swapCoin} too? (1 to 20): ")
+    var swapBox = readln().toInt()
 
 }
 
