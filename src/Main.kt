@@ -84,7 +84,6 @@ fun listEmptyBoxes(boxList: List<String>) {
 
     }
 
-
 }
 
 fun layOut(boxList: List<String>) {
@@ -106,11 +105,12 @@ fun layOut(boxList: List<String>) {
 fun swapBoxes(boxList: List<String>) {
     println("What coin do you want to move?: ")
     var swapCoin = readln()
-    boxList[boxNum1 - 1]
 
-    println("What box would you like to move ${swapCoin} too? (1 to 20): ")
+
+    println("How many boxes to the left? ")
     var swapBox = readln().toInt()
 
+
+
+
 }
-
-
