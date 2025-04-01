@@ -109,5 +109,10 @@ fun swapBoxes(boxList: List<String>) {
 
     println("How many boxes to the left? ")
     var swapBox = readln().toInt()
+    
 
 }
+//fun removeACoin(coins: List<String>) {
+//    var userInput = readln()
+//    val remove = coins.removeAt(userInput)
+//}
