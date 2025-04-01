@@ -10,21 +10,21 @@ Terminology:
 
 ---
 
-## Example Test Name
+## Board Layout
 
-Example test description. Example test description. Example test description. Example test description. Example test description. Example test description.
+Do the coins randomly go into different positions without stacking in the boxes 
 
 ### Test Data To Use
 
-Details of test data and reasons for selection. Details of test data and reasons for selection. Details of test data and reasons for selection.
+I will test the code a couple times to see if the code isn't broken and randomly places the coins i different spots each time
 
 ### Expected Test Result
 
-Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. 
+When the user runs the code it should say what coins are in the board then it will place them randomly in the boxes without stacking on top one another. 
 
 ---
 
-## Example Test Name
+## 
 
 Example test description. Example test description. Example test description. Example test description. Example test description. Example test description.
 

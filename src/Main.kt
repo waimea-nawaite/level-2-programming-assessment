@@ -110,7 +110,4 @@ fun swapBoxes(boxList: List<String>) {
     println("How many boxes to the left? ")
     var swapBox = readln().toInt()
 
-
-
-
 }
