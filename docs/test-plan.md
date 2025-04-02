@@ -20,7 +20,8 @@ I will test the code a couple times to see if the code isn't broken and randomly
 
 ### Expected Test Result
 
-When the user runs the code it should say what coins are in the board then it will place them randomly in the boxes without stacking on top one another. 
+When the user runs the code it should say what coins are in the board then it will place them randomly in the boxes without stacking on top one another.
+![Gif animation for test plan 1.gif](..%2F..%2F..%2F..%2F..%2FDesktop%2FGif%20animation%20for%20test%20plan%201.gif)
 
 ---
 

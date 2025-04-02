@@ -54,8 +54,12 @@ fun main() {
     layOut(coins)
     println()
 
-    swapBoxes(coins)
 
+    println("How many boxes to the left? ")
+    var swapBox = readln()
+    if (swapBox != "$coins") {
+
+    }
 
 
 }
@@ -102,16 +106,14 @@ fun layOut(boxList: List<String>) {
     println("+----".repeat(20) + "+")
 
 }
-fun swapBoxes(boxList: List<String>) {
-    println("What coin do you want to move?: ")
-    var swapCoin = readln()
 
 
-    println("How many boxes to the left? ")
-    var swapBox = readln().toInt()
-    
+//fun swapBoxes(boxList: List<String>) {
+//    println("What coin do you want to move?: ")
+//    var swapCoin = readln()
+//
+//}
 
-}
 //fun removeACoin(coins: List<String>) {
 //    var userInput = readln()
 //    val remove = coins.removeAt(userInput)
