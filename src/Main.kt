@@ -54,15 +54,13 @@ fun main() {
     layOut(coins)
     println()
 
-
-    println("How many boxes to the left? ")
-    var swapBox = readln()
-    if (swapBox != "$coins") {
-
-    }
+    moveCoin()
 
 
 }
+
+
+
 
 fun setUpBoxes(): MutableList<String> {
     val boxList = mutableListOf<String>()
@@ -108,11 +106,13 @@ fun layOut(boxList: List<String>) {
 }
 
 
-//fun swapBoxes(boxList: List<String>) {
-//    println("What coin do you want to move?: ")
-//    var swapCoin = readln()
-//
-//}
+fun moveCoin(boxList: MutableList<String>, coinType: String): Any {
+    
+}
+
+
+
+
 
 //fun removeACoin(coins: List<String>) {
 //    var userInput = readln()
