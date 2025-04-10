@@ -54,16 +54,22 @@ fun main() {
 
         val coinIndex = getCoin(board)
         // Check if 0...???
-        if (coinIndex == 0) 
-
-
-
+        if (coinIndex == 0) {
+            if (board[0] == "G") {
+                board[0] = EMPTY
+                println("Game finished! The gold coin has been removed!")
+            }
+            
+        }
         // else
         val newPosition = getMove(board)
 
         // move the coin
         board[newPosition] = board[coinIndex]
         board[coinIndex] = EMPTY
+
+        showBoard(board)
+        println()
 
         playerTurn = if (playerTurn == player1) player2 else player1
     }
@@ -133,35 +139,49 @@ fun getCoin(board: List<String>): Int {
     }
 }
 fun getMove(board: List<String>): Int {
+    while (true) {
+        println("Please enter the new position (1-${board.size}):")
+        val newPosition = readln().toIntOrNull()?.minus(1) ?: continue
 
+        if (newPosition < 0 || newPosition >= board.size || board[newPosition] != EMPTY) {
+            println("Invalid move. The target position is either out of bounds or not empty. Please try again.")
+
+        } else {
+            return newPosition
+        }
+    }
 }
 
-{
-    println("Please enter the new position (1-${coins.size}):")
-    val newPosition = readln().toIntOrNull()?.minus(1) ?: continue
-
-    if (newPosition < 0 || newPosition >= coins.size || coins[newPosition] != EMPTY) {
-        println("Invalid move. The target position is either out of bounds or not empty. Please try again.")
-        continue
-    }
-
-    // Move the coin
-    coins[newPosition] = coins[coinIndex]
-    coins[coinIndex] = EMPTY
-
-    showBoard(coins)
-    println()
-
-    // Check for win
-    if (coins[newPosition] == "G") {
-        println("$playerTurn has removed the gold coin! $playerTurn wins!")
-        break
-    }
-
-    // Switch players
 
 
-}
+
+//
+//{
+//    println("Please enter the new position (1-${coins.size}):")
+//    val newPosition = readln().toIntOrNull()?.minus(1) ?: continue
+//
+//    if (newPosition < 0 || newPosition >= coins.size || coins[newPosition] != EMPTY) {
+//        println("Invalid move. The target position is either out of bounds or not empty. Please try again.")
+//        continue
+//    }
+//
+//    // Move the coin
+//    coins[newPosition] = coins[coinIndex]
+//    coins[coinIndex] = EMPTY
+//
+//    showBoard(coins)
+//    println()
+//
+//    // Check for win
+//    if (coins[newPosition] == "G") {
+//        println("$playerTurn has removed the gold coin! $playerTurn wins!")
+//        break
+//    }
+//
+//    // Switch players
+//
+//
+//}
 
 
 
