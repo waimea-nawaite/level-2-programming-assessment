@@ -59,7 +59,7 @@ fun main() {
                 board[0] = EMPTY
                 println("Game finished! The gold coin has been removed!")
             }
-            
+            //Ned You need to let sliver coins be removed
         }
         // else
         val newPosition = getMove(board)
