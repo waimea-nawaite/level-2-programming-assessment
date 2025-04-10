@@ -14,6 +14,9 @@
 
 const val NUMBOXES = 20
 const val EMPTY = "  "
+const val SILVER = "S "
+const val GOLD = "G "
+
 
 
 fun main() {
@@ -22,73 +25,83 @@ fun main() {
     println("=========================================================================")
     println("This is a two-player game, played on a one-dimensional grid with coins, |")
     println("* where the aim is to win by being the player who removes the gold coin.|")
+    println("")
     println("=========================================================================")
 
     println("Welcome to Old Gold!")
     println("Please enter your names for player 1 and 2: ")
 
 
-    val coins = setUpBoxes()
+    val board = setupGame()
 
-    coins.add("S1")
-    coins.add("S2")
-    coins.add("S3")
-    coins.add("S4")
-    coins.add("S5")
-    coins.add("G ")
-
+    //The players names
+    print("Player 1, enter your name: ")
     val player1 = readln()
-    println("Player 1: $player1")
-
+    print("Player 2, enter your name: ")
     val player2 = readln()
-    println("Player 2: $player2")
-    println()
+
     println("Player 1: $player1")
     println("Player 2: $player2")
 
-    println("Placing coins into the Boxes...")
+    println("Placing coins onto the board...")
 
-    listAllBoxes(coins)
-    coins.shuffle()
-
-    layOut(coins)
+    showBoard(board)
     println()
 
-    moveCoin()
+    var playerTurn = player1
+    while (true) {
+        println("$playerTurn's turn...")
+
+        val coinIndex = getCoin(board)
+        // Check if 0...???
+        if (coinIndex == 0) 
 
 
+
+        // else
+        val newPosition = getMove(board)
+
+        // move the coin
+        board[newPosition] = board[coinIndex]
+        board[coinIndex] = EMPTY
+
+        playerTurn = if (playerTurn == player1) player2 else player1
+    }
 }
 
 
 
 
-fun setUpBoxes(): MutableList<String> {
+//How the boxes are setup
+fun setupGame(): MutableList<String> {
     val boxList = mutableListOf<String>()
-    for (i in 1..NUMBOXES - 6) boxList.add(EMPTY)
+
+    val numSilver = 5
+    val numGold = 1
+    val numSpaces = NUMBOXES - numSilver - numGold
+
+    for (i in 1..numSpaces) boxList.add(EMPTY)
+    for (i in 1..numSilver) boxList.add(SILVER)
+    boxList.add(GOLD)
+
+    boxList.shuffle()
+
     return boxList
 }
 
+//Lists the coins in order
+//fun listAllCoins(boxList: List<String>) {
+//    for (i in 0..<boxList.size) {
+//        if (boxList[i] != EMPTY) {
+//            println("- ${boxList[i]}")
+//        }
+//
+//    }
+//
+//}
 
-fun listAllBoxes(boxList: List<String>) {
-    for (i in 0..<boxList.size) {
-        if (boxList[i] != EMPTY) {
-            println("- ${boxList[i]}")
-        }
 
-    }
-
-}
-fun listEmptyBoxes(boxList: List<String>) {
-    for (i in 0..<boxList.size) {
-        if (boxList[i] == EMPTY) {
-            println("- ${i + 1}")
-        }
-
-    }
-
-}
-
-fun layOut(boxList: List<String>) {
+fun showBoard(boxList: List<String>) {
 
 
     println("+----".repeat(20) + "+")
@@ -106,8 +119,48 @@ fun layOut(boxList: List<String>) {
 }
 
 
-fun moveCoin(boxList: MutableList<String>, coinType: String): Any {
-    
+fun getCoin(board: List<String>): Int {
+    while(true) {
+        println("Please enter the index of the coin you want to move (1-${board.size}):")
+        val coinIndex = readln().toIntOrNull()?.minus(1) ?: continue
+
+        if (coinIndex < 0 || coinIndex >= board.size || board[coinIndex] == EMPTY) {
+            println("Invalid coin selection. Please try again.")
+        }
+        else {
+            return coinIndex
+        }
+    }
+}
+fun getMove(board: List<String>): Int {
+
+}
+
+{
+    println("Please enter the new position (1-${coins.size}):")
+    val newPosition = readln().toIntOrNull()?.minus(1) ?: continue
+
+    if (newPosition < 0 || newPosition >= coins.size || coins[newPosition] != EMPTY) {
+        println("Invalid move. The target position is either out of bounds or not empty. Please try again.")
+        continue
+    }
+
+    // Move the coin
+    coins[newPosition] = coins[coinIndex]
+    coins[coinIndex] = EMPTY
+
+    showBoard(coins)
+    println()
+
+    // Check for win
+    if (coins[newPosition] == "G") {
+        println("$playerTurn has removed the gold coin! $playerTurn wins!")
+        break
+    }
+
+    // Switch players
+
+
 }
 
 
