@@ -1,3 +1,5 @@
+import kotlin.math.E
+
 /**
  * =====================================================================
  * Programming Project for NCEA Level 2, Standard 91896
@@ -52,17 +54,31 @@ fun main() {
     while (true) {
         println("$playerTurn's turn...")
 
+
+
+
         val coinIndex = getCoin(board)
         // Check if 0...???
         if (coinIndex == 0) {
-            if (board[0] == "G") {
+            if (board[0] == "G ") {
                 board[0] = EMPTY
                 println("Game finished! The gold coin has been removed!")
+                break
+
             }
-            //Ned You need to let sliver coins be removed
+            if (board[0] == "S ") {
+                board[0] = EMPTY
+
+            }
         }
+
         // else
         val newPosition = getMove(board)
+
+        if (board[newPosition] == "G") {
+            println("$playerTurn has removed the gold coin! $playerTurn wins!")
+            break
+        }
 
         // move the coin
         board[newPosition] = board[coinIndex]
@@ -140,13 +156,14 @@ fun getCoin(board: List<String>): Int {
 }
 fun getMove(board: List<String>): Int {
     while (true) {
-        println("Please enter the new position (1-${board.size}):")
+        println("Please enter the new position")
         val newPosition = readln().toIntOrNull()?.minus(1) ?: continue
 
         if (newPosition < 0 || newPosition >= board.size || board[newPosition] != EMPTY) {
-            println("Invalid move. The target position is either out of bounds or not empty. Please try again.")
+            println("Invalid position. Please try again.")
 
-        } else {
+        }
+        else {
             return newPosition
         }
     }
