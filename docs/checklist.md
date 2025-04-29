@@ -9,45 +9,45 @@ This checklist can be used to gauge progress towards different levels of success
 ### Program Functionality
 
 The game functions correctly and meets the specification:
-- [ ] The game is **playable**
-- [ ] The **instructions** for the game are available in-game
-- [ ] **Two players** can play
+- [x] The game is **playable**
+- [x] The **instructions** for the game are available in-game
+- [x] **Two players** can play
 - [x] Player **names** are used to identify each player
-- [ ] Players **take turns** to play
-- [ ] Players provides **input data** to the game (e.g. moves to make)
-- [ ] The **current status** of the game is shown after each play
-- [ ] A **winner is detected** correctly
+- [x] Players **take turns** to play
+- [x] Players provides **input data** to the game (e.g. moves to make)
+- [x] The **current status** of the game is shown after each play
+- [x] A **winner is detected** correctly
 
 ### Program Code
 
 The program stores data using:
-- [ ] **Variables** of at least two types (e.g. int, text, boolean)
+- [x] **Variables** of at least two types (e.g. int, text, boolean)
 - [x] At least one **data collection** (array / list) to store some elements of the game data
 
 The program structure:
 - [x] Is broken up into **functions**: a main function, plus other supporting functions 
-- [ ] Contains **sequences** of instructions
-- [ ] Uses **conditional** instructions to control the program flow
-- [ ] Uses program **branches** (if...else, when, etc.)
-- [ ] Uses **iteration** (loops) to repeat things (for, while, etc.)
+- [x] Contains **sequences** of instructions
+- [x] Uses **conditional** instructions to control the program flow
+- [x] Uses program **branches** (if...else, when, etc.)
+- [x] Uses **iteration** (loops) to repeat things (for, while, etc.)
 
 ### Program Documentation
 
 The program code:
 - [x] Is **indented** correctly
 - [x] Is **laid-out clearly**
-- [ ] Contains **comments** that help in understanding how it works
+- [x] Contains **comments** that help in understanding how it works
 
 ### Program Testing
 
 The program has been tested and there is documented evidence that:
 - [ ] The game is **fully functional**, showing testing of:
-  - [ ] game setup
-  - [ ] player moves
-  - [ ] players taking turns
+  - [x] game setup
+  - [x] player moves
+  - [x] players taking turns
   - [ ] scoring (if any)
-  - [ ] players winning
-  - [ ] final feedback (if appropriate)
+  - [x] players winning
+  - [x] final feedback (if appropriate)
 - [ ] **Valid (expected) data** has been used to test **all data inputs**
 - [ ] Where tests have failed, **fixes** are discussed and **tests re-run**
 

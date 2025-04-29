@@ -10,35 +10,34 @@ The development log captures key moments in your application development:
 
 ---
 
-## Date: xx/xx/20xx
+## Date: 29/04/2025
 
-Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes.
-
-![example.png](screenshots/example.png)
-
----
-
-## Date: xx/xx/20xx
-
-Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes.
-
-![example.png](screenshots/example.png)
+The game wont move any coin the player selects
+![Gif animation for not moving coin.gif](screenshots/Gif animation for not moving coin.gif)
 
 ---
 
-## Date: xx/xx/20xx
+## Date: 29/04/2025
 
-Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes.
-
-![example.png](screenshots/example.png)
+I have fixed the problem with the coin moving I added some old code from my previous attempt and it worked
+![Gif animation for moving coin.gif](screenshots/Gif animation for moving coin.gif)
 
 ---
 
-## Date: xx/xx/20xx
+## Date: 28/04/2025
 
-Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes.
+the game isn't removing the silver coins
 
-![example.png](screenshots/example.png)
+![Gif animation for bugs.gif](screenshots/Gif animation for bugs.gif)
+
+---
+
+## Date: 28/04/2025
+
+I fixed the problem with the silver coins by adding some code that allows the silver coins to be removed. And it fixed the bug
+
+
+![Gif animation for bugs fix silver.gif](screenshots/Gif animation for bugs fix silver.gif)
 
 ---
 

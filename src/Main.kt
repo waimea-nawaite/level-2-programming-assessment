@@ -13,7 +13,7 @@ import kotlin.math.E
  * where the aim is to win by being the player who removes the gold coin.
  * =====================================================================
  */
-
+//constant values
 const val NUMBOXES = 20
 const val EMPTY = "  "
 const val SILVER = "S "
@@ -24,11 +24,13 @@ const val GOLD = "G "
 fun main() {
     println()
     println("Old Gold game 700")
-    println("=========================================================================")
+    println("====================================================================================================")
     println("This is a two-player game, played on a one-dimensional grid with coins, |")
-    println("* where the aim is to win by being the player who removes the gold coin.|")
-    println("")
-    println("=========================================================================")
+    println("Rules: You can ONLY move a coin to the left how many boxes you want but WITHOUT")
+    println("jumping over another coin. When you have a coin in box 1 to remove it select the coin then press 1.")
+    println("Removing any coin counts as a turn so play smart")
+    println("Who ever removes the gold coin wins the game. GOODLUCK!")
+    println("====================================================================================================")
 
     println("Welcome to Old Gold!")
     println("Please enter your names for player 1 and 2: ")
@@ -56,13 +58,14 @@ fun main() {
 
 
 
-
+//this checks if the gold coin has been removed and removes the silvers
         val coinIndex = getCoin(board)
         // Check if 0...???
         if (coinIndex == 0) {
             if (board[0] == "G ") {
                 board[0] = EMPTY
                 println("Game finished! The gold coin has been removed!")
+                println("Congratulations! Restart the game to play again")
                 break
 
             }
@@ -72,21 +75,18 @@ fun main() {
             }
         }
 
-        // else
+
         val newPosition = getMove(board)
 
-        if (board[newPosition] == "G") {
-            println("$playerTurn has removed the gold coin! $playerTurn wins!")
-            break
-        }
 
-        // move the coin
+        // moves the coin with the players input
         board[newPosition] = board[coinIndex]
         board[coinIndex] = EMPTY
 
         showBoard(board)
         println()
 
+        //swaps players turns
         playerTurn = if (playerTurn == player1) player2 else player1
     }
 }
@@ -94,7 +94,7 @@ fun main() {
 
 
 
-//How the boxes are setup
+//How the boxes are setup with the coins randomly placed inside
 fun setupGame(): MutableList<String> {
     val boxList = mutableListOf<String>()
 
@@ -111,20 +111,8 @@ fun setupGame(): MutableList<String> {
     return boxList
 }
 
-//Lists the coins in order
-//fun listAllCoins(boxList: List<String>) {
-//    for (i in 0..<boxList.size) {
-//        if (boxList[i] != EMPTY) {
-//            println("- ${boxList[i]}")
-//        }
-//
-//    }
-//
-//}
-
-
+//This makes the board layout for the coins and boxes
 fun showBoard(boxList: List<String>) {
-
 
     println("+----".repeat(20) + "+")
     for (i in 0..boxList.size - 1) {
@@ -140,7 +128,7 @@ fun showBoard(boxList: List<String>) {
 
 }
 
-
+//This asks the user what coin they want to move and if its an invalid input it asks again
 fun getCoin(board: List<String>): Int {
     while(true) {
         println("Please enter the index of the coin you want to move (1-${board.size}):")
@@ -154,6 +142,7 @@ fun getCoin(board: List<String>): Int {
         }
     }
 }
+//This asks the user where they want to move the coin they have selected and if its invalid then asks again
 fun getMove(board: List<String>): Int {
     while (true) {
         println("Please enter the new position")
@@ -168,43 +157,3 @@ fun getMove(board: List<String>): Int {
         }
     }
 }
-
-
-
-
-//
-//{
-//    println("Please enter the new position (1-${coins.size}):")
-//    val newPosition = readln().toIntOrNull()?.minus(1) ?: continue
-//
-//    if (newPosition < 0 || newPosition >= coins.size || coins[newPosition] != EMPTY) {
-//        println("Invalid move. The target position is either out of bounds or not empty. Please try again.")
-//        continue
-//    }
-//
-//    // Move the coin
-//    coins[newPosition] = coins[coinIndex]
-//    coins[coinIndex] = EMPTY
-//
-//    showBoard(coins)
-//    println()
-//
-//    // Check for win
-//    if (coins[newPosition] == "G") {
-//        println("$playerTurn has removed the gold coin! $playerTurn wins!")
-//        break
-//    }
-//
-//    // Switch players
-//
-//
-//}
-
-
-
-
-
-//fun removeACoin(coins: List<String>) {
-//    var userInput = readln()
-//    val remove = coins.removeAt(userInput)
-//}

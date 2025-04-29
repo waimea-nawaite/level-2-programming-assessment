@@ -10,33 +10,49 @@ Terminology:
 
 ---
 
-## Board Layout
+## Board amount of boxes
 
-Do the coins randomly go into different positions without stacking in the boxes 
-
-### Test Data To Use
-
-I will test the code a couple times to see if the code isn't broken and randomly places the coins i different spots each time
-
-### Expected Test Result
-
-When the user runs the code it should say what coins are in the board then it will place them randomly in the boxes without stacking on top one another.
-![Gif animation for test plan 1.gif](..%2F..%2F..%2F..%2F..%2FDesktop%2FGif%20animation%20for%20test%20plan%201.gif)
-
----
-
-## 
-
-Example test description. Example test description. Example test description. Example test description. Example test description. Example test description.
+I want for my board to have how many boxes the user wants
 
 ### Test Data To Use
 
-Details of test data and reasons for selection. Details of test data and reasons for selection. Details of test data and reasons for selection.
+Let the user choose a certain amount of boxes they want
 
 ### Expected Test Result
 
-Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. 
+How many boxes do you want to play with?
+
+e.g. User input = 10
 
 ---
+
+## Board
+
+I want the board to be layed out easy to see the coins
+
+### Test Data To Use
+
+I will print out the way I want it to and see if it comes out correctly
+
+### Expected Test Result
+
++----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+| 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
++----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+| S  |    |    |    |    | G  | S  | S  |    | S  |    |    | S  |    |    |    |    |    |    |    |
++----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+If your reading this on preview mode the boxes look weird to fix it go into editor
+---
+## Winning
+
+I want for the game to tell the players who won
+
+### Test Data To Use
+
+I will make the game say the gold coin has been removed to indicate that the player won.
+
+### Expected Test Result
+
+You have won the gold coin has been removed!
 
 
