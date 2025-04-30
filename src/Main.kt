@@ -27,7 +27,7 @@ fun main() {
     println("====================================================================================================")
     println("This is a two-player game, played on a one-dimensional grid with coins, |")
     println("Rules: You can ONLY move a coin to the left how many boxes you want but WITHOUT")
-    println("jumping over another coin. When you have a coin in box 1 to remove it select the coin then press 1.")
+    println("jumping over another coin. When you have a coin in box 1 to remove it select the coin in the box then type 1.")
     println("Removing any coin counts as a turn so play smart")
     println("Who ever removes the gold coin wins the game. GOODLUCK!")
     println("====================================================================================================")
@@ -51,12 +51,10 @@ fun main() {
 
     showBoard(board)
     println()
-
+    //Loop for main game
     var playerTurn = player1
     while (true) {
         println("$playerTurn's turn...")
-
-
 
 //this checks if the gold coin has been removed and removes the silvers
         val coinIndex = getCoin(board)

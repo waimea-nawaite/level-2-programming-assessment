@@ -55,4 +55,14 @@ I will make the game say the gold coin has been removed to indicate that the pla
 
 You have won the gold coin has been removed!
 
+## Players moving
 
+I want the game to let the players move easy across the board
+
+### Test Data To Use
+
+I will make the game ask the players what coin to move then ask the box they want to place it in but if it goes over or under the board limit then it will ask again.
+
+### Expected Test Result
+
+The coin should be able to move and wont stack on top of other coins

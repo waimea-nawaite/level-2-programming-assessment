@@ -62,9 +62,8 @@ I will test to see if the game can tell if when the gold coin is removed to say 
 
 ![Gif animation 4 for test plan 1.gif](screenshots/Gif animation 4 for test plan 1.gif)
 
-Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result.
+Result Pass
 
----
 
 ## Final message for who won
 
@@ -77,21 +76,22 @@ I will test to see if the game congratulates the player after removing the gold 
 
 ![Gif animation for congrats.gif](screenshots/Gif animation for congrats.gif)
 
-result: Pass
+Result: Pass
 
 
-## Example Test Name
+## Coins can go anywhere on board
 
-Example test description. Example test description.Example test description. Example test description.Example test description. Example test description.
+Does the program let the coin move anywhere along the board.
 
 ### Test Data Used
 
-Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data.
+I will test to see if a coin on the board can move freely anywhere without the program crashing.
+
 
 ### Test Result
 
-![example.png](screenshots/example.png)
+![Gif animation for moving coin anywhere.gif](screenshots/Gif animation for moving coin anywhere.gif)
 
-Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result.
+Result: Pass
 
 ---
