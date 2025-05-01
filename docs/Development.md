@@ -41,11 +41,4 @@ I fixed the problem with the silver coins by adding some code that allows the si
 
 ---
 
-## Date: xx/xx/20xx
-
-Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes.
-
-![example.png](screenshots/example.png)
-
----
 
