@@ -16,7 +16,7 @@ I will test the code a couple times to see if the code isn't broken and randomly
 
 When the user runs the code it should say what coins are in the board then it will place them randomly in the boxes without stacking on top one another.
 
-![Gif animation for test plan 1.gif](screenshots/Gif animation for test plan 1.gif)
+![Gif animation for test plan 1.gif](<screenshots/Gif animation for test plan 1.gif>)
 
 Result: Pass
 
@@ -31,7 +31,7 @@ I will test to see if the board prints out after each turn so players can see th
 
 ### Test Result
 
-![Gif animation 2 for test plan 1.gif](screenshots/Gif animation 2 for test plan 1.gif)
+![Gif animation 2 for test plan 1.gif](<screenshots/Gif animation 2 for test plan 1.gif>)
 
 result: Pass
 
@@ -45,7 +45,7 @@ I will test to see if the game takes turns of players after each move
 
 ### Test Result
 
-![Gif animation 3 for test plan 1.gif](screenshots/Gif animation 3 for test plan 1.gif)
+![Gif animation 3 for test plan 1.gif](<screenshots/Gif animation 3 for test plan 1.gif>)
 
 Result: Pass
 
@@ -60,7 +60,7 @@ I will test to see if the game can tell if when the gold coin is removed to say 
 
 ### Test Result
 
-![Gif animation 4 for test plan 1.gif](screenshots/Gif animation 4 for test plan 1.gif)
+![Gif animation 4 for test plan 1.gif](<screenshots/Gif animation 4 for test plan 1.gif>)
 
 Result Pass
 
@@ -74,7 +74,7 @@ Does the game congratulate the player who won?
 I will test to see if the game congratulates the player after removing the gold coin
 ### Test Result
 
-![Gif animation for congrats.gif](screenshots/Gif animation for congrats.gif)
+![Gif animation for congrats.gif](<screenshots/Gif animation for congrats.gif>)
 
 Result: Pass
 
@@ -90,7 +90,7 @@ I will test to see if a coin on the board can move freely anywhere without the p
 
 ### Test Result
 
-![Gif animation for moving coin anywhere.gif](screenshots/Gif animation for moving coin anywhere.gif)
+![Gif animation for moving coin anywhere.gif](<screenshots/Gif animation for moving coin anywhere.gif>)
 
 Result: Pass
 
